@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ministerio de Defensa</string>
+    <string name="login">login</string>
+    <string name="user_email">Email de Usuario</string>
+</resources>

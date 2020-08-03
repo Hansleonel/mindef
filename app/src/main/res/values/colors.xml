@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffff</color>
+    <color name="colorGreen">#4cab03</color>
+    <color name="colorRed">#ff1744</color>
+    <color name="colorSemiBlack">#212121</color>
+    <color name="colorSemiGreen">#00c853</color>
+    <color name="colorSelectItemButtonNavigation">#ff595a</color>
+    <color name="colorWindow">?android:attr/windowBackground</color>
+    <color name="sinch_purple">#ff63029d</color>
+    <color name="colorAccentComplementary">#fef5f6</color>
+    <color name="off_white">#fffafafa</color>
+    <color name="greyish">#fff2f1f2</color>
+</resources>
