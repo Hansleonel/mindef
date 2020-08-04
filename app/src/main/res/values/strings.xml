@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">Ministerio de Defensa</string>
-    <string name="login">login</string>
-    <string name="user_email">Email de Usuario</string>
+    <string name="login">Ingresar</string>
+    <string name="register">Registrarse</string>
+    <string name="register_email">Ingrese su email</string>
+    <string name="register_password">Ingrese su password</string>
+    <string name="register_dni">Ingrese su dni</string>
+    <string name="register_date">Ingrese la fecha de emisión</string>
+    <string name="user_email">Email</string>
+    <string name="user_password">Password</string>
+    <string name="user_date">Fecha</string>
+    <string name="user_dni">DNI</string>
+    <string name="user_password_recovery">Olvide mi Password</string>
+    <string name="condition">Para continuar con el servicio tu estas de acuerdo con las políticas de privacidad de la Aplicación</string>
+    <string name="accept">Aceptar</string>
+
 </resources>
