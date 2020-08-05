@@ -13,5 +13,27 @@
     <string name="user_password_recovery">Olvide mi Password</string>
     <string name="condition">Para continuar con el servicio tu estas de acuerdo con las políticas de privacidad de la Aplicación</string>
     <string name="accept">Aceptar</string>
+    <string name="home">Home</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="homeFragment">HomeFragment</string>
+    <string name="Services">Servicios</string>
+    <string name="services_description">Este es un listado de los servicios que podemos ofrecerte</string>
+    <string name="virtual_procedures">Tramites Virtuales</string>
+    <string name="enter_documents">Ingresar Documentos</string>
+    <string name="tracking_procedures">Seguimiento de Tramites</string>
+    <string name="enter_number">Ingresa Código</string>
+    <string name="attention_phones">Lineas de atención</string>
+    <string name="mindef_numbers">Números Mindef</string>
+    <string name="public_information">Información Pública</string>
+    <string name="search_information">Busca Información</string>
+    <string name="white_book">Libro de Reclamaciones</string>
+    <string name="enter_claim">Ingrese su reclamo</string>
+    <string name="complaint">Denuncia por corrupción</string>
+    <string name="enter_complaint">Ingrese Denuncia</string>
+    <string name="inbox">inbox</string>
 
 </resources>
