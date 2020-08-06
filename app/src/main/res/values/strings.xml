@@ -35,5 +35,7 @@
     <string name="complaint">Denuncia por corrupción</string>
     <string name="enter_complaint">Ingrese Denuncia</string>
     <string name="inbox">inbox</string>
+    <string name="documents">Mis documentos</string>
+    <string name="responses">Mis Respuestas</string>
 
 </resources>
