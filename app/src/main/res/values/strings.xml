@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Ministerio de Defensa</string>
+    <string name="app_description">Bienvenidos a la plaforma del Ministerio de Defensa</string>
     <string name="login">Ingresar</string>
     <string name="register">Registrarse</string>
     <string name="register_email">Ingrese su email</string>
+    <string name="register_mail_validation">Mail incorrecto, ingrese un mail Válido</string>
     <string name="register_password">Ingrese su password</string>
     <string name="register_dni">Ingrese su dni</string>
     <string name="register_date">Ingrese la fecha de emisión</string>
