@@ -2,12 +2,36 @@ package com.mindef.gob;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.WindowManager;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static com.mindef.gob.Utilities.Constants.URL_BASE;
 
 public class SplashActivity extends AppCompatActivity {
+
+    private String userLogin;
+    private String passwordLogin;
+    private String TokenUser;
 
     @Override
     protected void onStart() {
@@ -21,11 +45,74 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void checkLogin() {
-        noLogin();
+        SharedPreferences SP = getApplicationContext().getSharedPreferences("UserSharedFile", MODE_PRIVATE);
+        userLogin = SP.getString("UserNameString", "UserDefaultValue");
+        passwordLogin = SP.getString("UserPasswordString", "PasswordDefaultValue");
+
+        if (!userLogin.equals("UserDefaultValue")) {
+            login();
+        } else {
+            noLogin();
+        }
+    }
+
+    private void login() {
+        JSONObject jsonLogin = new JSONObject();
+        try {
+            jsonLogin.put("username", userLogin);
+            jsonLogin.put("password", passwordLogin);
+            jsonLogin.put("rememberMe", false);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        Log.d("LOGIN", "login: " + jsonLogin);
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
+                Request.Method.POST, URL_BASE + "authenticate", jsonLogin, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    Log.d("Token", "onResponse: " + response.getString("id_token"));
+                    TokenUser = response.getString("id_token");
+
+                    SharedPreferences sharedPreferences = getSharedPreferences("TokenSharedFile", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("TokenUserString", TokenUser);
+                    editor.commit();
+
+                    toNavigation();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d("Request error", "onLoginError");
+                Toast.makeText(SplashActivity.this, R.string.warning_splash, Toast.LENGTH_LONG).show();
+                noLogin();
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
+            }
+        };
+        //Adding request
+        Volley.newRequestQueue(this).add(jsonObjectRequest);
+    }
+
+    private void toNavigation() {
+        Intent intent = new Intent(SplashActivity.this, NavigationActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     private void noLogin() {
-        Intent intent = new Intent(SplashActivity.this, StartActivity.class);
+        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

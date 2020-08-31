@@ -1,5 +1,7 @@
 package com.mindef.gob.Fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -18,6 +20,22 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        view.findViewById(R.id.logout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences sharedPreferences = getContext().getSharedPreferences("UserSharedFile", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear();
+                editor.apply();
+
+                SharedPreferences sharedPreferencesT = getContext().getSharedPreferences("TokenSharedFile", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editorT = sharedPreferencesT.edit();
+                editorT.clear();
+                editorT.apply();
+
+                getActivity().finish();
+            }
+        });
         return view;
     }
 }
