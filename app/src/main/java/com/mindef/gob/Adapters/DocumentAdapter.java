@@ -58,11 +58,12 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView txtV_item_document_title, txtV_item_document_subject, txtV_item_document_date;
+        private TextView txtV_item_document_id, txtV_item_document_title, txtV_item_document_subject, txtV_item_document_date;
         private ImageView imgV_item_document_type;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            txtV_item_document_id = itemView.findViewById(R.id.txtV_item_document_id);
             txtV_item_document_title = itemView.findViewById(R.id.txtV_item_document_title);
             txtV_item_document_subject = itemView.findViewById(R.id.txtV_item_document_subject);
             txtV_item_document_date = itemView.findViewById(R.id.txtV_item_document_date);
@@ -70,6 +71,7 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.ViewHo
         }
 
         public void bindDocument(Document document) {
+            txtV_item_document_id.setText(String.valueOf(document.getIdDocument()));
             txtV_item_document_title.setText(document.getTitleDocument());
             txtV_item_document_subject.setText(document.getSubjectDocument());
             txtV_item_document_date.setText(document.getDateDocument());

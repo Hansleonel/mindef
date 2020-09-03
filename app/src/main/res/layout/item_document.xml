@@ -20,7 +20,13 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:contentDescription="@string/document_type"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/ic_document_type_s" />
+
+        <TextView
+            android:id="@+id/txtV_item_document_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
 
     </LinearLayout>
 

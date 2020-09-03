@@ -37,6 +37,8 @@
     <string name="complaint">Denuncia por corrupción</string>
     <string name="enter_complaint">Ingrese Denuncia</string>
     <string name="inbox">inbox</string>
+    <string name="document">Documento</string>
+    <string name="document_answer">Documento Respuesta</string>
     <string name="documents">Mis documentos</string>
     <string name="responses">Mis Respuestas</string>
     <string name="create">crear</string>
@@ -44,6 +46,7 @@
     <string name="create_document">Crear Documento</string>
     <string name="document_type">Tipo de documento</string>
     <string name="title_document">Título del Documento</string>
+    <string name="id_document">Id del Documento</string>
     <string name="subject_document">Asunto del Documento</string>
     <string name="warning">Error en el registro</string>
     <string name="warning_login">Error de Login, Compruebe sus Datos</string>
@@ -54,8 +57,11 @@
     <string name="attach_document_description">Tus archivos aparecerán aquí, recuerda que solo formato PDF y como maximo 5 archivos</string>
     <string name="send_document">Enviar Documento</string>
     <string name="size_document">Tamaño Documento</string>
+    <string name="locate_document">Ubicar Documento</string>
+    <string name="status_document_completed">Documento Revisado</string>
     <string name="inbox_empty">Bandeja Vacía</string>
     <string name="inbox_waiting">Visualizaras tus documentos aqui, Aún no envias documentos</string>
     <string name="reply_waiting">Visualizaras las respuestas a tus documentos aquí, Aun no recibes ningun respuesta</string>
+    <string name="desk_reception">Mesa de Partes</string>
 
 </resources>

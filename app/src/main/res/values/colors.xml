@@ -7,6 +7,7 @@
     <color name="colorWhite">#ffff</color>
     <color name="colorGreen">#4cab03</color>
     <color name="colorRed">#C3001D</color>
+    <color name="colorRedAccent">#ff1744</color>
     <color name="colorSemiBlack">#212121</color>
     <color name="colorSemiGreen">#00c853</color>
     <color name="colorSelectItemButtonNavigation">#ff595a</color>

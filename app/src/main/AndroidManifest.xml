@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".DocumentReadActivity"></activity>
         <activity android:name=".DocumentCreateActivity" />
         <activity android:name=".StartActivity" />
         <activity android:name=".SplashActivity">

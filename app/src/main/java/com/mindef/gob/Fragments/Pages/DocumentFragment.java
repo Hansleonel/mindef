@@ -30,6 +30,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.mindef.gob.Adapters.DocumentAdapter;
 import com.mindef.gob.DocumentCreateActivity;
+import com.mindef.gob.DocumentReadActivity;
 import com.mindef.gob.Models.Document;
 import com.mindef.gob.R;
 
@@ -125,8 +126,11 @@ public class DocumentFragment extends Fragment {
                                 @Override
                                 public void onClick(View view) {
                                     String titleDoc = ((TextView) recyclerViewDocuments.findViewHolderForAdapterPosition(recyclerViewDocuments.getChildLayoutPosition(view))
-                                            .itemView.findViewById(R.id.txtV_item_document_title)).getText().toString();
-                                    Toast.makeText(getContext(), R.string.title_document + titleDoc, Toast.LENGTH_LONG).show();
+                                            .itemView.findViewById(R.id.txtV_item_document_id)).getText().toString();
+                                    Toast.makeText(getContext(), titleDoc, Toast.LENGTH_LONG).show();
+                                    Intent i = new Intent(getContext(), DocumentReadActivity.class);
+                                    i.putExtra("idDocument", titleDoc);
+                                    startActivity(i);
                                 }
                             });
 
