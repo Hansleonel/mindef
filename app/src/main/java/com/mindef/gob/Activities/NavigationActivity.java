@@ -1,4 +1,4 @@
-package com.mindef.gob;
+package com.mindef.gob.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mindef.gob.Fragments.HomeFragment;
 import com.mindef.gob.Fragments.NotificationFragment;
 import com.mindef.gob.Fragments.ProfileFragment;
+import com.mindef.gob.R;
 
 public class NavigationActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;

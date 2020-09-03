@@ -1,4 +1,4 @@
-package com.mindef.gob;
+package com.mindef.gob.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -10,6 +10,7 @@ import com.mindef.gob.Adapters.ViewPagerAdapter;
 import com.mindef.gob.Fragments.Pages.DocumentFragment;
 import com.mindef.gob.Fragments.Pages.ReplyFragment;
 import com.mindef.gob.Fragments.ProfileFragment;
+import com.mindef.gob.R;
 
 public class ProcedureActivity extends AppCompatActivity {
 

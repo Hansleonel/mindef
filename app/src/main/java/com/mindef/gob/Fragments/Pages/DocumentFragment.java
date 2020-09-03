@@ -18,19 +18,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.mindef.gob.Adapters.DocumentAdapter;
-import com.mindef.gob.DocumentCreateActivity;
-import com.mindef.gob.DocumentReadActivity;
+import com.mindef.gob.Activities.DocumentCreateActivity;
+import com.mindef.gob.Activities.DocumentReadActivity;
 import com.mindef.gob.Models.Document;
 import com.mindef.gob.R;
 

@@ -1,10 +1,12 @@
-package com.mindef.gob;
+package com.mindef.gob.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.mindef.gob.R;
 
 import java.util.ArrayList;
 import java.util.List;

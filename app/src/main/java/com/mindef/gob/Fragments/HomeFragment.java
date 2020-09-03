@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.mindef.gob.ProcedureActivity;
+import com.mindef.gob.Activities.ProcedureActivity;
 import com.mindef.gob.R;
 
 public class HomeFragment extends Fragment {

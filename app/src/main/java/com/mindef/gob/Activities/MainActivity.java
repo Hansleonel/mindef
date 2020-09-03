@@ -1,4 +1,4 @@
-package com.mindef.gob;
+package com.mindef.gob.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,9 +6,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
-import android.view.WindowManager;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.mindef.gob.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,40 +28,47 @@ import java.util.Map;
 
 import static com.mindef.gob.Utilities.Constants.URL_BASE;
 
-public class SplashActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
-    private String userLogin;
-    private String passwordLogin;
+    private EditText editTextEmail, editTextPassword;
     private String TokenUser;
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        new Handler().postDelayed(new Runnable() {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        editTextEmail = findViewById(R.id.edt_email_login);
+        editTextPassword = findViewById(R.id.edt_password_login);
+
+        findViewById(R.id.btn_login).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                checkLogin();
+            public void onClick(View view) {
+                if (editTextEmail.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(MainActivity.this, R.string.register_dni, Toast.LENGTH_LONG).show();
+                } else if (editTextPassword.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(MainActivity.this, R.string.register_password, Toast.LENGTH_LONG).show();
+                } else {
+                    login();
+                }
             }
-        }, 1000);
-    }
+        });
 
-    private void checkLogin() {
-        SharedPreferences SP = getApplicationContext().getSharedPreferences("UserSharedFile", MODE_PRIVATE);
-        userLogin = SP.getString("UserNameString", "UserDefaultValue");
-        passwordLogin = SP.getString("UserPasswordString", "PasswordDefaultValue");
-
-        if (!userLogin.equals("UserDefaultValue")) {
-            login();
-        } else {
-            noLogin();
-        }
+        findViewById(R.id.btn_register).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void login() {
+
         JSONObject jsonLogin = new JSONObject();
         try {
-            jsonLogin.put("username", userLogin);
-            jsonLogin.put("password", passwordLogin);
+            jsonLogin.put("username", editTextEmail.getText().toString());
+            jsonLogin.put("password", editTextPassword.getText().toString());
             jsonLogin.put("rememberMe", false);
         } catch (JSONException e) {
             e.printStackTrace();
@@ -81,17 +89,24 @@ public class SplashActivity extends AppCompatActivity {
                     editor.putString("TokenUserString", TokenUser);
                     editor.commit();
 
+                    SharedPreferences sharedPreferencesUser = getSharedPreferences("UserSharedFile", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editorUser = sharedPreferencesUser.edit();
+                    editorUser.putString("UserNameString", editTextEmail.getText().toString().trim());
+                    editorUser.putString("UserPasswordString", editTextPassword.getText().toString().trim());
+                    editorUser.commit();
+
                     toNavigation();
+
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    Toast.makeText(MainActivity.this, R.string.warning_response, Toast.LENGTH_LONG).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                VolleyLog.d("Request error", "onLoginError");
-                Toast.makeText(SplashActivity.this, R.string.warning_splash, Toast.LENGTH_LONG).show();
-                noLogin();
+                VolleyLog.d("Request error", "onLoginError" + error.getMessage());
+                Toast.makeText(MainActivity.this, R.string.warning_login, Toast.LENGTH_LONG).show();
             }
         }) {
             @Override
@@ -101,26 +116,14 @@ public class SplashActivity extends AppCompatActivity {
                 return headers;
             }
         };
+
         //Adding request
         Volley.newRequestQueue(this).add(jsonObjectRequest);
     }
 
     private void toNavigation() {
-        Intent intent = new Intent(SplashActivity.this, NavigationActivity.class);
+        Intent intent = new Intent(MainActivity.this, NavigationActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-    }
-
-    private void noLogin() {
-        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_splash);
     }
 }

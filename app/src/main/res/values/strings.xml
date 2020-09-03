@@ -39,6 +39,7 @@
     <string name="inbox">inbox</string>
     <string name="document">Documento</string>
     <string name="document_answer">Documento Respuesta</string>
+    <string name="document_preview">Documento Vista Previa</string>
     <string name="documents">Mis documentos</string>
     <string name="responses">Mis Respuestas</string>
     <string name="create">crear</string>

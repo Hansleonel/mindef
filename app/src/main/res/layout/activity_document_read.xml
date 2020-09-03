@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DocumentReadActivity">
+    tools:context=".Activities.DocumentReadActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/bar"
