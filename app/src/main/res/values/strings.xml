@@ -27,6 +27,7 @@
     <string name="virtual_procedures">Tramites Virtuales</string>
     <string name="enter_documents">Ingresar Documentos</string>
     <string name="tracking_procedures">Seguimiento de Tramites</string>
+    <string name="tracking_procedures_description">Puedes darle seguimiento a los documentos enviados al Ministerio</string>
     <string name="enter_number">Ingresa Código</string>
     <string name="attention_phones">Lineas de atención</string>
     <string name="mindef_numbers">Números Mindef</string>
@@ -64,5 +65,10 @@
     <string name="inbox_waiting">Visualizaras tus documentos aqui, Aún no envias documentos</string>
     <string name="reply_waiting">Visualizaras las respuestas a tus documentos aquí, Aun no recibes ningun respuesta</string>
     <string name="desk_reception">Mesa de Partes</string>
+    <string name="desk_reception_description">Ahora la mesa de partes es 100% Digital y Abierta para realizar tus tramites</string>
+    <string name="permissions">Permisos para ayudarte</string>
+    <string name="permissions_grant">Conceder Permisos</string>
+    <string name="permissions_granted">Permisos Condedidos Correctamente</string>
+    <string name="permissions_description">Necesitamos de ciertos permisos para poder realizar tus tramites</string>
 
 </resources>

@@ -33,6 +33,7 @@ public class SplashActivity extends AppCompatActivity {
     private String userLogin;
     private String passwordLogin;
     private String TokenUser;
+    private String userViewSlide;
 
     @Override
     protected void onStart() {
@@ -49,12 +50,25 @@ public class SplashActivity extends AppCompatActivity {
         SharedPreferences SP = getApplicationContext().getSharedPreferences("UserSharedFile", MODE_PRIVATE);
         userLogin = SP.getString("UserNameString", "UserDefaultValue");
         passwordLogin = SP.getString("UserPasswordString", "PasswordDefaultValue");
+        userViewSlide = SP.getString("UserViewSlideString", "UserViewDefaultValue");
 
-        if (!userLogin.equals("UserDefaultValue")) {
-            login();
+
+        if (!userViewSlide.equals("UserViewDefaultValue")) {
+            if (!userLogin.equals("UserDefaultValue")) {
+                login();
+            } else {
+                noLogin();
+            }
         } else {
-            noLogin();
+            viewSlides();
         }
+
+    }
+
+    private void viewSlides() {
+        Intent intent = new Intent(SplashActivity.this, StartActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     private void login() {
