@@ -105,11 +105,11 @@ public class DocumentFragment extends Fragment {
                             for (int i = 0; i < response.length(); i++) {
                                 JSONObject documentJsonObject = response.getJSONObject(i);
                                 int idDocument = documentJsonObject.getInt("id");
+                                String codeDocument = documentJsonObject.getString("codigo");
                                 String typeDocument = documentJsonObject.getString("serie");
-                                String titleDocument = documentJsonObject.getString("codigo");
                                 String subjectDocument = documentJsonObject.getString("asunto");
                                 String dateDocument = documentJsonObject.getString("fecha");
-                                documentArrayList.add(new Document(idDocument, titleDocument, typeDocument, subjectDocument, dateDocument));
+                                documentArrayList.add(new Document(idDocument, codeDocument, typeDocument, subjectDocument, dateDocument));
                             }
 
                             DocumentAdapter documentAdapter = new DocumentAdapter(getContext(), documentArrayList);
@@ -122,11 +122,11 @@ public class DocumentFragment extends Fragment {
                             documentAdapter.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    String titleDoc = ((TextView) recyclerViewDocuments.findViewHolderForAdapterPosition(recyclerViewDocuments.getChildLayoutPosition(view))
-                                            .itemView.findViewById(R.id.txtV_item_document_id)).getText().toString();
-                                    Toast.makeText(getContext(), titleDoc, Toast.LENGTH_LONG).show();
+                                    String codeDoc = ((TextView) recyclerViewDocuments.findViewHolderForAdapterPosition(recyclerViewDocuments.getChildLayoutPosition(view))
+                                            .itemView.findViewById(R.id.txtV_item_document_track)).getText().toString();
+                                    Toast.makeText(getContext(), codeDoc, Toast.LENGTH_LONG).show();
                                     Intent i = new Intent(getContext(), DocumentReadActivity.class);
-                                    i.putExtra("idDocument", titleDoc);
+                                    i.putExtra("codeDocument", codeDoc);
                                     startActivity(i);
                                 }
                             });

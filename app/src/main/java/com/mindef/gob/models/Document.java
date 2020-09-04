@@ -2,18 +2,18 @@ package com.mindef.gob.models;
 
 public class Document {
     private int idDocument;
+    private String codeDocument;
     private String typeDocument;
-    private String titleDocument;
     private String subjectDocument;
     private String dateDocument;
 
     public Document() {
     }
 
-    public Document(int idDocument, String typeDocument, String titleDocument, String subjectDocument, String dateDocument) {
+    public Document(int idDocument, String codeDocument, String typeDocument, String subjectDocument, String dateDocument) {
         this.idDocument = idDocument;
+        this.codeDocument = codeDocument;
         this.typeDocument = typeDocument;
-        this.titleDocument = titleDocument;
         this.subjectDocument = subjectDocument;
         this.dateDocument = dateDocument;
     }
@@ -26,20 +26,20 @@ public class Document {
         this.idDocument = idDocument;
     }
 
+    public String getCodeDocument() {
+        return codeDocument;
+    }
+
+    public void setCodeDocument(String codeDocument) {
+        this.codeDocument = codeDocument;
+    }
+
     public String getTypeDocument() {
         return typeDocument;
     }
 
     public void setTypeDocument(String typeDocument) {
         this.typeDocument = typeDocument;
-    }
-
-    public String getTitleDocument() {
-        return titleDocument;
-    }
-
-    public void setTitleDocument(String titleDocument) {
-        this.titleDocument = titleDocument;
     }
 
     public String getSubjectDocument() {

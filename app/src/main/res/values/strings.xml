@@ -41,6 +41,8 @@
     <string name="document">Documento</string>
     <string name="document_answer">Documento Respuesta</string>
     <string name="document_preview">Documento Vista Previa</string>
+    <string name="document_track">Código del Documento</string>
+    <string name="document_track_description">Ingrese el código del Documento</string>
     <string name="documents">Mis documentos</string>
     <string name="responses">Mis Respuestas</string>
     <string name="create">crear</string>
@@ -54,6 +56,7 @@
     <string name="warning_login">Error de Login, Compruebe sus Datos</string>
     <string name="warning_splash">Error de conexion, comprueba si tienes Internet</string>
     <string name="warning_response">Error en al respuesta del servidor</string>
+    <string name="warning_search">Error en la busqueda del codigo</string>
     <string name="attach">Adjuntar</string>
     <string name="attach_document">Tocar para adjuntar un pdf adicional</string>
     <string name="attach_document_description">Tus archivos aparecerán aquí, recuerda que solo formato PDF y como maximo 5 archivos</string>
