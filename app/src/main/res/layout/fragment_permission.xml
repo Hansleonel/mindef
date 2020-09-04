@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorRed"
-    tools:context=".Fragments.PagesIntro.PermissionFragment">
+    tools:context=".fragments.PagesIntro.PermissionFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

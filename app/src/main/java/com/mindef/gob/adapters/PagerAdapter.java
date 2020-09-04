@@ -1,4 +1,4 @@
-package com.mindef.gob.Adapters;
+package com.mindef.gob.adapters;
 
 import java.util.List;
 

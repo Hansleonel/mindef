@@ -1,4 +1,4 @@
-package com.mindef.gob.Activities;
+package com.mindef.gob.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,7 +32,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.mindef.gob.Utilities.Constants.URL_BASE;
+import static com.mindef.gob.utilities.Constants.URL_BASE;
 
 public class RegisterActivity extends AppCompatActivity {
 

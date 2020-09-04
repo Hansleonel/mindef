@@ -1,4 +1,4 @@
-package com.mindef.gob.Models;
+package com.mindef.gob.models;
 
 public class Document {
     private int idDocument;

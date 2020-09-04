@@ -1,4 +1,4 @@
-package com.mindef.gob.Fragments.PagesIntro;
+package com.mindef.gob.fragments.PagesIntro;
 
 import android.os.Bundle;
 
@@ -10,13 +10,13 @@ import android.view.ViewGroup;
 
 import com.mindef.gob.R;
 
-public class WelcomeFragment extends Fragment {
+public class PermissionFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_welcome, container, false);
+        View view = inflater.inflate(R.layout.fragment_permission, container, false);
         return view;
     }
 }

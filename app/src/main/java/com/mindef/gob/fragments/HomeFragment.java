@@ -1,4 +1,4 @@
-package com.mindef.gob.Fragments;
+package com.mindef.gob.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.mindef.gob.Activities.ProcedureActivity;
+import com.mindef.gob.activities.ProcedureActivity;
 import com.mindef.gob.R;
 
 public class HomeFragment extends Fragment {

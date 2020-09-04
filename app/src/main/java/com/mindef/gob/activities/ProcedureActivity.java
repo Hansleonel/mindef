@@ -1,4 +1,4 @@
-package com.mindef.gob.Activities;
+package com.mindef.gob.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -6,10 +6,9 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
-import com.mindef.gob.Adapters.ViewPagerAdapter;
-import com.mindef.gob.Fragments.Pages.DocumentFragment;
-import com.mindef.gob.Fragments.Pages.ReplyFragment;
-import com.mindef.gob.Fragments.ProfileFragment;
+import com.mindef.gob.adapters.ViewPagerAdapter;
+import com.mindef.gob.fragments.Pages.DocumentFragment;
+import com.mindef.gob.fragments.Pages.ReplyFragment;
 import com.mindef.gob.R;
 
 public class ProcedureActivity extends AppCompatActivity {

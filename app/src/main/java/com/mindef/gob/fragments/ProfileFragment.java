@@ -1,4 +1,4 @@
-package com.mindef.gob.Fragments;
+package com.mindef.gob.fragments;
 
 import android.content.Context;
 import android.content.SharedPreferences;

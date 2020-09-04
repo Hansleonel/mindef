@@ -1,4 +1,4 @@
-package com.mindef.gob.Activities;
+package com.mindef.gob.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -18,10 +17,10 @@ import android.widget.Toast;
 
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
-import com.mindef.gob.Adapters.PagerAdapter;
-import com.mindef.gob.Fragments.PagesIntro.AdvantageFragment;
-import com.mindef.gob.Fragments.PagesIntro.PermissionFragment;
-import com.mindef.gob.Fragments.PagesIntro.WelcomeFragment;
+import com.mindef.gob.adapters.PagerAdapter;
+import com.mindef.gob.fragments.PagesIntro.AdvantageFragment;
+import com.mindef.gob.fragments.PagesIntro.PermissionFragment;
+import com.mindef.gob.fragments.PagesIntro.WelcomeFragment;
 import com.mindef.gob.R;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.mindef.gob.Fragments.Pages;
+package com.mindef.gob.fragments.Pages;
 
 import android.content.Context;
 import android.content.Intent;
@@ -25,10 +25,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.mindef.gob.Adapters.DocumentAdapter;
-import com.mindef.gob.Activities.DocumentCreateActivity;
-import com.mindef.gob.Activities.DocumentReadActivity;
-import com.mindef.gob.Models.Document;
+import com.mindef.gob.adapters.DocumentAdapter;
+import com.mindef.gob.activities.DocumentCreateActivity;
+import com.mindef.gob.activities.DocumentReadActivity;
+import com.mindef.gob.models.Document;
 import com.mindef.gob.R;
 
 import org.json.JSONArray;
@@ -39,7 +39,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.mindef.gob.Utilities.Constants.URL_BASE;
+import static com.mindef.gob.utilities.Constants.URL_BASE;
 
 public class DocumentFragment extends Fragment {
 

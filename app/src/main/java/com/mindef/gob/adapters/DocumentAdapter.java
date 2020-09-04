@@ -1,4 +1,4 @@
-package com.mindef.gob.Adapters;
+package com.mindef.gob.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mindef.gob.Models.Document;
+import com.mindef.gob.models.Document;
 import com.mindef.gob.R;
 
 import java.util.ArrayList;

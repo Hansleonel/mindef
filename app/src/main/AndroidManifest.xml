@@ -15,21 +15,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activities.DocumentViewActivity" />
-        <activity android:name=".Activities.DocumentReadActivity" />
-        <activity android:name=".Activities.DocumentCreateActivity" />
-        <activity android:name=".Activities.StartActivity" />
-        <activity android:name=".Activities.SplashActivity">
+        <activity android:name=".activities.DocumentViewActivity" />
+        <activity android:name=".activities.DocumentReadActivity" />
+        <activity android:name=".activities.DocumentCreateActivity" />
+        <activity android:name=".activities.StartActivity" />
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.ProcedureActivity" />
-        <activity android:name=".Activities.NavigationActivity" />
-        <activity android:name=".Activities.RegisterActivity" />
-        <activity android:name=".Activities.MainActivity" />
+        <activity android:name=".activities.ProcedureActivity" />
+        <activity android:name=".activities.NavigationActivity" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.MainActivity" />
     </application>
 
 </manifest>

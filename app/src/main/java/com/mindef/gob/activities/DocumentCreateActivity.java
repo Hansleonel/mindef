@@ -1,4 +1,4 @@
-package com.mindef.gob.Activities;
+package com.mindef.gob.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

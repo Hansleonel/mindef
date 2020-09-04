@@ -1,4 +1,4 @@
-package com.mindef.gob.Fragments.Pages;
+package com.mindef.gob.fragments.Pages;
 
 import android.os.Bundle;
 

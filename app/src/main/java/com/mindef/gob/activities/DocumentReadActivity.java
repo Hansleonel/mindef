@@ -1,9 +1,8 @@
-package com.mindef.gob.Activities;
+package com.mindef.gob.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import com.mindef.gob.R;
 

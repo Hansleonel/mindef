@@ -7,7 +7,7 @@
     android:background="@color/colorRed"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Activities.SplashActivity">
+    tools:context=".activities.SplashActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
