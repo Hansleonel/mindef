@@ -46,4 +46,8 @@ dependencies {
     // Download Large Files
     implementation 'com.mindorks.android:prdownloader:0.6.0'
 
+    // PDF Viewer
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+
 }

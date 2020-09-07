@@ -57,6 +57,7 @@
     <string name="warning_splash">Error de conexion, comprueba si tienes Internet</string>
     <string name="warning_response">Error en al respuesta del servidor</string>
     <string name="warning_search">Error en la busqueda del codigo</string>
+    <string name="warning_pdf">Erroe en la busqueda del PDF</string>
     <string name="attach">Adjuntar</string>
     <string name="attach_document">Tocar para adjuntar un pdf adicional</string>
     <string name="attach_document_description">Tus archivos aparecerán aquí, recuerda que solo formato PDF y como maximo 5 archivos</string>

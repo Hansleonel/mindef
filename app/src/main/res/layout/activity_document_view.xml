@@ -55,11 +55,14 @@
 
         <ProgressBar
             android:id="@+id/pbV_pdf"
-            android:layout_width="wrap_content"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorBlack" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabViewer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|bottom"
@@ -67,6 +70,12 @@
             android:backgroundTint="@color/colorRedAccent"
             android:contentDescription="@string/create"
             android:src="@drawable/ic_share" />
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
 
     </FrameLayout>
 

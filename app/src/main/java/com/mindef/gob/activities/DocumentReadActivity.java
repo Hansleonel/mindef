@@ -33,6 +33,7 @@ public class DocumentReadActivity extends AppCompatActivity {
     private TextView txtV_document_read_title, txtV_document_read_subject, txtV_document_read_date;
 
     private String codeDocument;
+    private String linkDocument;
 
     private String TOKENUSER;
 
@@ -51,9 +52,13 @@ public class DocumentReadActivity extends AppCompatActivity {
         findViewById(R.id.lV_pdfViewer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(DocumentReadActivity.this, DocumentViewActivity.class);
-                i.putExtra("codeDocument", codeDocument);
-                startActivity(i);
+                if (linkDocument != null) {
+                    Intent i = new Intent(DocumentReadActivity.this, DocumentViewActivity.class);
+                    i.putExtra("linkDocument", linkDocument);
+                    startActivity(i);
+                } else {
+                    Toast.makeText(getApplicationContext(), R.string.warning_pdf, Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -78,7 +83,8 @@ public class DocumentReadActivity extends AppCompatActivity {
                             String serie = response.getString("serie");
                             String asunto = response.getString("asunto");
                             String fecha = response.getString("fecha");
-                            String link = response.getString("link");
+                            // TODO recordar corregir el link devuelto por el servidor
+                            linkDocument = response.getString("link");
 
                             txtV_document_read_title.setText(serie);
                             txtV_document_read_subject.setText(asunto);
