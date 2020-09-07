@@ -1,12 +1,15 @@
 package com.mindef.gob.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -181,6 +184,16 @@ public class DocumentViewActivity extends AppCompatActivity {
     }
 
     private void shareFile() {
-
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.putExtra(Intent.EXTRA_TEXT, "Send PDF");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            Uri path = FileProvider.getUriForFile(DocumentViewActivity.this, "com.mindef.gob", new File(PATH_PDF + "/response.pdf"));
+            i.putExtra(Intent.EXTRA_STREAM, path);
+        } else {
+            i.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(PATH_PDF + "/response.pdf")));
+        }
+        i.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        i.setType("plain/*");
+        startActivity(i);
     }
 }
