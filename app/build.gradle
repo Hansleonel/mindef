@@ -43,4 +43,7 @@ dependencies {
     // Permission Request
     implementation 'gun0912.ted:tedpermission:2.2.2';
 
+    // Download Large Files
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
+
 }

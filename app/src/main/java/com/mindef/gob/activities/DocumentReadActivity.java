@@ -3,9 +3,11 @@ package com.mindef.gob.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,6 +47,15 @@ public class DocumentReadActivity extends AppCompatActivity {
 
         codeDocument = getIntent().getStringExtra("codeDocument");
         Log.d("DocumentReadActivity", "onCreate: " + codeDocument);
+
+        findViewById(R.id.lV_pdfViewer).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(DocumentReadActivity.this, DocumentViewActivity.class);
+                i.putExtra("codeDocument", codeDocument);
+                startActivity(i);
+            }
+        });
 
         getUserTokenShared();
         searchDocument();
