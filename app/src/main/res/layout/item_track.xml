@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="32dp"
+            android:contentDescription="@string/locate_document"
+            android:src="@drawable/ic_check_circle" />
+
+        <View
+            android:id="@+id/view_item_line_track"
+            android:layout_width="1dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:background="@color/colorBlack" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtV_item_office_track"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/desk_reception"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/txtV_item_date_track"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/user_date"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtV_item_state_track"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/robotoligth"
+            android:text="@string/status_document_completed"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

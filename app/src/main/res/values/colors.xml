@@ -17,4 +17,6 @@
     <color name="colorBackground">#F4F6FC</color>
     <color name="off_white">#fffafafa</color>
     <color name="greyish">#fff2f1f2</color>
+    <color name="success_load">#a7ffeb</color>
+    <color name="success_upload">#1de9b6</color>
 </resources>

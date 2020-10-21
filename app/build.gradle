@@ -49,5 +49,6 @@ dependencies {
     // PDF Viewer
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
 
-
+    // Upload Large Files
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 }

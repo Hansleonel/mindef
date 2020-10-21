@@ -8,6 +8,7 @@
     <string name="register_password">Ingrese su password</string>
     <string name="register_dni">Ingrese su dni</string>
     <string name="register_date">Ingrese la fecha de emisión</string>
+    <string name="register_success">Registrado exitosamente, Ahora puedes Ingresar a la aplicación</string>
     <string name="user_email">Email</string>
     <string name="user_password">Password</string>
     <string name="user_date">Fecha</string>
@@ -17,6 +18,8 @@
     <string name="accept">Aceptar</string>
     <string name="home">Home</string>
     <string name="notification">Notification</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="notifications_description">Revisa tus noficaciones aqui</string>
     <string name="profile">Profile</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -40,11 +43,16 @@
     <string name="inbox">inbox</string>
     <string name="document">Documento</string>
     <string name="document_answer">Documento Respuesta</string>
+    <string name="document_answer_select">Ver Respuestas</string>
+    <string name="document_answer_source">ir Documento Origen</string>
     <string name="document_preview">Documento Vista Previa</string>
     <string name="document_track">Código del Documento</string>
     <string name="document_track_description">Ingrese el código del Documento</string>
+    <string name="document_pdf">Documento PDF</string>
+    <string name="document_state_pending">Documento con Estado Pendiente</string>
     <string name="documents">Mis documentos</string>
     <string name="responses">Mis Respuestas</string>
+    <string name="preview">Ver</string>
     <string name="create">crear</string>
     <string name="arrow">Flecha</string>
     <string name="create_document">Crear Documento</string>
@@ -57,16 +65,26 @@
     <string name="warning_splash">Error de conexion, comprueba si tienes Internet</string>
     <string name="warning_response">Error en al respuesta del servidor</string>
     <string name="warning_search">Error en la busqueda del codigo</string>
-    <string name="warning_pdf">Erroe en la busqueda del PDF</string>
+    <string name="warning_pdf">Error en la busqueda del PDF</string>
     <string name="attach">Adjuntar</string>
-    <string name="attach_document">Tocar para adjuntar un pdf adicional</string>
+    <string name="attach_document">Tocar para adjuntar un pdf</string>
     <string name="attach_document_description">Tus archivos aparecerán aquí, recuerda que solo formato PDF y como maximo 5 archivos</string>
+    <string name="attached">Anexos</string>
+    <string name="attached_document">Documento Adjuntado</string>
     <string name="send_document">Enviar Documento</string>
+    <string name="sending_document">0 Documentos por Enviar</string>
+    <string name="sending_empty">Documentos PDF vacios</string>
+    <string name="upload_successful">Documentos Enviados Correctamente</string>
+    <string name="upload_wrong">Documentos No Enviados, vuelve a intentar</string>
+    <string name="upload_wrong_subject">El asunto debe de tener mas de 11 caracteres</string>
+    <string name="uploading_documents">Subiendo Archivos</string>
     <string name="size_document">Tamaño Documento</string>
     <string name="locate_document">Ubicar Documento</string>
     <string name="status_document_completed">Documento Revisado</string>
+    <string name="message_document_answer">Este documento es una respuesta, puedes verificar su documento de Origen a Continuación</string>
     <string name="inbox_empty">Bandeja Vacía</string>
     <string name="inbox_waiting">Visualizaras tus documentos aqui, Aún no envias documentos</string>
+    <string name="inbox_refresh">Bandeja Actualizada</string>
     <string name="reply_waiting">Visualizaras las respuestas a tus documentos aquí, Aun no recibes ningun respuesta</string>
     <string name="desk_reception">Mesa de Partes</string>
     <string name="desk_reception_description">Ahora la mesa de partes es 100% Digital y Abierta para realizar tus tramites</string>
@@ -74,5 +92,11 @@
     <string name="permissions_grant">Conceder Permisos</string>
     <string name="permissions_granted">Permisos Condedidos Correctamente</string>
     <string name="permissions_description">Necesitamos de ciertos permisos para poder realizar tus tramites</string>
+    <string name="mail_notification">Verificacion de Mail</string>
+    <string name="mail_notification_description">Debes de verificar tu correo electronico para recibir respuestas</string>
+    <string name="mail_resend">Reenviando correo para la verificación</string>
+    <string name="notification_refresh">Bandeja de Notificaciones Actualizada</string>
+    <string name="date_day">Hoy</string>
+    <string name="time_day">Hace 5 minutos</string>
 
 </resources>

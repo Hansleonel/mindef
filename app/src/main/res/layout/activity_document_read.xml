@@ -66,25 +66,25 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imgV_type"
+                        android:id="@+id/imgV_type_read_document"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
                         android:contentDescription="@string/document_type"
                         android:src="@drawable/ic_document_type_s" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="8"
                     android:orientation="vertical">
 
                     <TextView
@@ -100,6 +100,7 @@
                         android:id="@+id/txtV_document_read_subject"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/robotoligth"
                         android:text="@string/subject_document"
                         android:textSize="14sp" />
 
@@ -119,249 +120,125 @@
                 android:id="@+id/lV_pdfViewer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="16dp"
-                    app:cardCornerRadius="10dp">
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1">
 
-                    <com.airbnb.lottie.LottieAnimationView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:lottie_autoPlay="true"
-                        app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/atached" />
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/document"
+                                android:padding="12dp"
+                                android:src="@drawable/ic_attach" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/attached_document"
+                                android:textColor="@color/colorBlack" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/robotoligth"
+                                android:text="@string/preview"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
             <TextView
+                android:id="@+id/txtV_document_read_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/robotoligth"
                 android:text="@string/locate_document"
                 android:textColor="@color/colorBlack"
                 android:textSize="16sp" />
 
-            <LinearLayout
-                android:orientation="horizontal"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rV_tracking"
+                tools:listitem="@layout/item_track"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginTop="16dp"
-                        android:contentDescription="@string/locate_document"
-                        android:src="@drawable/ic_check_circle" />
-    
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="40dp"
-                        android:background="@color/colorBlack" />
-    
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:layout_marginStart="32dp"
-                        android:contentDescription="@string/locate_document"
-                        android:src="@drawable/ic_check_circle" />
-    
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="40dp"
-                        android:background="@color/colorBlack" />
-    
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:layout_marginStart="32dp"
-                        android:contentDescription="@string/locate_document"
-                        android:src="@drawable/ic_check_circle" />
-    
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="40dp"
-                        android:background="@color/colorBlack" />
-    
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:layout_marginStart="32dp"
-                        android:contentDescription="@string/locate_document"
-                        android:src="@drawable/ic_check_circle" />
-    
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="40dp"
-                        android:background="@color/colorBlack" />
-    
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:layout_marginStart="32dp"
-                        android:contentDescription="@string/locate_document"
-                        android:src="@drawable/ic_check_circle"
-                        android:tint="@color/colorRedAccent" />
-
-                </LinearLayout>
-                
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="16dp"
-                        android:text="@string/desk_reception"
-                        android:textColor="@color/colorBlack" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/user_date"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/robotoligth"
-                        android:text="@string/status_document_completed"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="14dp"
-                        android:text="@string/desk_reception"
-                        android:textColor="@color/colorBlack" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/user_date"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/robotoligth"
-                        android:text="@string/status_document_completed"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="14dp"
-                        android:text="@string/desk_reception"
-                        android:textColor="@color/colorBlack" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/user_date"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/robotoligth"
-                        android:text="@string/status_document_completed"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="14dp"
-                        android:text="@string/desk_reception"
-                        android:textColor="@color/colorBlack" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/user_date"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/robotoligth"
-                        android:text="@string/status_document_completed"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="14dp"
-                        android:text="@string/desk_reception"
-                        android:textColor="@color/colorBlack" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/user_date"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/robotoligth"
-                        android:text="@string/document_answer"
-                        android:textColor="@color/colorRedAccent"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-                
-            </LinearLayout>
+                android:layout_height="wrap_content"/>
 
             <Button
+                android:id="@+id/btn_read_document_answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="32dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="4dp"
                 android:background="@color/colorRed"
-                android:text="@string/document_answer"
-                android:textColor="@color/colorWhite" />
+                android:text="@string/document_answer_select"
+                android:textColor="@color/colorWhite"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_read_document_answer_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorRed"
+                android:text="@string/document_answer_source"
+                android:textColor="@color/colorWhite"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtV_document_read_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/responses"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rV_answers"
+                tools:listitem="@layout/item_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
 
         </LinearLayout>
 

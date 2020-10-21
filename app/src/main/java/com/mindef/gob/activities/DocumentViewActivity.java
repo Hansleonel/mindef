@@ -65,7 +65,8 @@ public class DocumentViewActivity extends AppCompatActivity {
         // PATH_PDF = Paths.getRootDirPath(getApplicationContext());
 
         // TODO recordar corregir el link devuelto por el servidor
-        linkDocument = getIntent().getStringExtra("codeDocument");
+        linkDocument = getIntent().getStringExtra("linkDocument");
+        Log.d("DocumentViewActivity", "onCreate: " + linkDocument);
 
         PATH_PDF = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath();
 
@@ -98,7 +99,7 @@ public class DocumentViewActivity extends AppCompatActivity {
             return;
         }
 
-        downloadValue = PRDownloader.download(URL_PDF, PATH_PDF, "response.pdf")
+        downloadValue = PRDownloader.download(URL_BASE + "documento/archivo/link/" + linkDocument, PATH_PDF, "response.pdf")
                 .setHeader("Authorization", "Bearer " + TOKENUSER)
                 .build()
                 .setOnStartOrResumeListener(new OnStartOrResumeListener() {

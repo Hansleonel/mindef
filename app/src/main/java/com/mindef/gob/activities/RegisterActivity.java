@@ -7,15 +7,18 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -36,20 +39,26 @@ import static com.mindef.gob.utilities.Constants.URL_BASE;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    private ScrollView sVRegister;
     private EditText editTextEmail, editTextPassword, editTextDni;
     private TextView textViewDate;
     private DatePickerDialog.OnDateSetListener dateSetListener;
     private ProgressBar progressBar;
+    private LottieAnimationView lottieAnimationView;
+    private TextView txtVRegisterSuccess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        sVRegister = findViewById(R.id.sV_register);
         editTextEmail = findViewById(R.id.edt_email_register);
         editTextPassword = findViewById(R.id.edt_password_register);
         editTextDni = findViewById(R.id.edt_dni_register);
         textViewDate = findViewById(R.id.txtV_dni_date_register);
         progressBar = findViewById(R.id.progressBarRegister);
+        lottieAnimationView = findViewById(R.id.lottieV_register_success);
+        txtVRegisterSuccess = findViewById(R.id.txtV_register_success);
 
         Calendar calendar = Calendar.getInstance();
         final int year = calendar.get(Calendar.YEAR);
@@ -109,8 +118,6 @@ public class RegisterActivity extends AppCompatActivity {
         try {
             jsonRegister.put("login", editTextDni.getText().toString());
             jsonRegister.put("password", editTextPassword.getText().toString());
-            jsonRegister.put("firstName", "Alfredo");
-            jsonRegister.put("lastName", "ccapa");
             jsonRegister.put("email", editTextEmail.getText().toString());
             jsonRegister.put("langKey", "es");
             jsonRegister.put("fechaEmision", "2017-12-22");
@@ -127,10 +134,13 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.d("Request response", "onResponse: " + response);
-
-                        Intent intent = new Intent(RegisterActivity.this, NavigationActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
+                        sVRegister.setVisibility(View.GONE);
+                        lottieAnimationView.setVisibility(View.VISIBLE);
+                        txtVRegisterSuccess.setVisibility(View.VISIBLE);
+                        noLogin();
+                        // Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                        // intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        // startActivity(intent);
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -153,5 +163,16 @@ public class RegisterActivity extends AppCompatActivity {
         // Adding request to request queue
         Volley.newRequestQueue(getApplicationContext()).add(jsonObjectRequest);
 
+    }
+
+    private void noLogin() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        }, 3000);
     }
 }

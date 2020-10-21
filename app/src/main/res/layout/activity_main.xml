@@ -37,9 +37,9 @@
         android:layout_marginRight="32dp"
         android:autofillHints="@string/user_email"
         android:background="@drawable/rect_edt_text"
-        android:drawableStart="@drawable/ic_email"
+        android:drawableStart="@drawable/ic_profile"
         android:fontFamily="@font/robotoligth"
-        android:hint="@string/user_email"
+        android:hint="@string/user_dni"
         android:inputType="textEmailAddress"
         android:padding="12dp" />
 

@@ -78,6 +78,14 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.ViewHo
             txtV_item_document_subject.setText(document.getSubjectDocument());
             txtV_item_document_date.setText(document.getDateDocument());
 
+            if (document.getTypeDocument().startsWith("CA")) {
+                imgV_item_document_type.setImageResource(R.drawable.ic_document_type_c);
+            }
+
+            if(!document.getCodeDocument().equals("null")){
+                String title = document.getTypeDocument() +" "+document.getCodeDocument();
+                txtV_item_document_title.setText(title);
+            } 
         }
     }
 }

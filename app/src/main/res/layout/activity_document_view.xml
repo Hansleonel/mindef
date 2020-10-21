@@ -76,7 +76,6 @@
             android:indeterminate="true"
             android:indeterminateTint="@color/colorBlack" />
 
-
     </FrameLayout>
 
 </LinearLayout>

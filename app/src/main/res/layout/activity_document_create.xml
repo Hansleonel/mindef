@@ -49,6 +49,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView
+        android:id="@+id/sV_send_document"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -100,6 +101,12 @@
                 android:textColor="@color/colorBlack"
                 android:textSize="16sp" />
 
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_subject_document"
                 android:layout_width="match_parent"
@@ -113,6 +120,8 @@
                 android:fontFamily="@font/robotoligth"
                 android:hint="@string/subject_document"
                 android:inputType="textMultiLine"
+                android:nextFocusLeft="@id/edt_subject_document"
+                android:nextFocusUp="@id/edt_subject_document"
                 android:padding="12dp" />
 
             <LinearLayout
@@ -152,6 +161,7 @@
             </LinearLayout>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardV_document_create_file_01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -162,7 +172,8 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -173,9 +184,9 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:contentDescription="@string/documents"
+                            android:contentDescription="@string/attach"
                             android:padding="12dp"
-                            android:src="@drawable/ic_document" />
+                            android:src="@drawable/ic_attach" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -184,13 +195,15 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/txtV_document_create_tittle_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="@string/documents"
+                            android:text="@string/attach_document"
                             android:textColor="@color/colorBlack" />
 
                         <TextView
+                            android:id="@+id/txtV_document_create_size_01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
@@ -204,6 +217,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardV_document_create_file_02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -224,9 +238,9 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:contentDescription="@string/documents"
+                            android:contentDescription="@string/attach"
                             android:padding="12dp"
-                            android:src="@drawable/ic_document" />
+                            android:src="@drawable/ic_attach" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -235,13 +249,15 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/txtV_document_create_tittle_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="@string/documents"
+                            android:text="@string/attach_document"
                             android:textColor="@color/colorBlack" />
 
                         <TextView
+                            android:id="@+id/txtV_document_create_size_02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
@@ -255,6 +271,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardV_document_create_file_03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -275,9 +292,9 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:contentDescription="@string/documents"
+                            android:contentDescription="@string/attach"
                             android:padding="12dp"
-                            android:src="@drawable/ic_document" />
+                            android:src="@drawable/ic_attach" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -286,13 +303,15 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/txtV_document_create_tittle_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="@string/documents"
+                            android:text="@string/attach_document"
                             android:textColor="@color/colorBlack" />
 
                         <TextView
+                            android:id="@+id/txtV_document_create_size_03"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
@@ -306,6 +325,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardV_document_create_file_04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -326,9 +346,9 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:contentDescription="@string/documents"
+                            android:contentDescription="@string/attach"
                             android:padding="12dp"
-                            android:src="@drawable/ic_document" />
+                            android:src="@drawable/ic_attach" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -337,13 +357,15 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/txtV_document_create_tittle_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="@string/documents"
+                            android:text="@string/attach_document"
                             android:textColor="@color/colorBlack" />
 
                         <TextView
+                            android:id="@+id/txtV_document_create_size_04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
@@ -357,6 +379,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardV_document_create_file_05"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -377,9 +400,9 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:contentDescription="@string/documents"
+                            android:contentDescription="@string/attach"
                             android:padding="12dp"
-                            android:src="@drawable/ic_document" />
+                            android:src="@drawable/ic_attach" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -388,13 +411,15 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/txtV_document_create_tittle_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="@string/documents"
+                            android:text="@string/attach_document"
                             android:textColor="@color/colorBlack" />
 
                         <TextView
+                            android:id="@+id/txtV_document_create_size_05"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
@@ -406,6 +431,26 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txtV_document_create_count_files"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/robotoligth"
+                android:gravity="center"
+                android:textColor="@color/colorRed"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/pbV_create_document_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn_start"
@@ -419,5 +464,64 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieV_upload"
+        android:layout_width="194dp"
+        android:layout_height="194dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/upload" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieV_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/error" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieV_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/success" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txtV_document_upload_wait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/uploading_documents"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtV_document_upload_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/upload_successful"
+        android:textColor="@color/success_upload"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtV_document_upload_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/upload_wrong"
+        android:textColor="@color/colorRed"
+        android:textSize="18sp"
+        android:visibility="gone" />
 
 </LinearLayout>
