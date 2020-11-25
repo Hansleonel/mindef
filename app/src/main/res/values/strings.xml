@@ -21,6 +21,13 @@
     <string name="notifications">Notificaciones</string>
     <string name="notifications_description">Revisa tus noficaciones aqui</string>
     <string name="profile">Profile</string>
+    <string name="presentment">Libro de Reclamaciones</string>
+    <string name="complain">Queja</string>
+    <string name="claim">Reclamo</string>
+    <string name="register_complaint">Registrar Queja</string>
+    <string name="register_claim">Registrar Reclamo</string>
+    <string name="subject_complaint">Asunto de la Queja</string>
+    <string name="subject_claim">Asunto del Reclamo</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -35,6 +42,10 @@
     <string name="attention_phones">Lineas de atención</string>
     <string name="mindef_numbers">Números Mindef</string>
     <string name="public_information">Información Pública</string>
+    <string name="public_information_access">Acceso Informacion Publica</string>
+    <string name="public_information_description">Tiene derecho a acceder a la información pública de las instituciones del Estado según la Ley Nº 27806,Ley de Transparencia y Acceso a la Información Pública.</string>
+    <string name="public_information_empty">Bandeja Vacía</string>
+    <string name="public_information_waiting">Visualiza aqui tus solicitudes al acceso a la información</string>
     <string name="search_information">Busca Información</string>
     <string name="white_book">Libro de Reclamaciones</string>
     <string name="enter_claim">Ingrese su reclamo</string>
@@ -60,6 +71,7 @@
     <string name="title_document">Título del Documento</string>
     <string name="id_document">Id del Documento</string>
     <string name="subject_document">Asunto del Documento</string>
+    <string name="subject">Asunto</string>
     <string name="warning">Error en el registro</string>
     <string name="warning_login">Error de Login, Compruebe sus Datos</string>
     <string name="warning_splash">Error de conexion, comprueba si tienes Internet</string>
@@ -69,6 +81,8 @@
     <string name="attach">Adjuntar</string>
     <string name="attach_document">Tocar para adjuntar un pdf</string>
     <string name="attach_document_description">Tus archivos aparecerán aquí, recuerda que solo formato PDF y como maximo 5 archivos</string>
+    <string name="attach_image">Adjuntar Imagen</string>
+    <string name="attach_image_description">Adjunta una photo o una imagen</string>
     <string name="attached">Anexos</string>
     <string name="attached_document">Documento Adjuntado</string>
     <string name="send_document">Enviar Documento</string>
@@ -98,5 +112,16 @@
     <string name="notification_refresh">Bandeja de Notificaciones Actualizada</string>
     <string name="date_day">Hoy</string>
     <string name="time_day">Hace 5 minutos</string>
+    <string name="complain_description">Respecto a una atención</string>
+    <string name="complaint_description">Puedes presentar una queja en caso exista una mala atención,vía telefónica, personal, o con el tiempo de atención</string>
+    <string name="claim_description">Respecto a un servicio</string>
+    <string name="claim_description_large">Puedes presentar un reclamo en caso hayas encontrado un problema con algún servicio o alguna característica de la aplicación</string>
+    <string name="claim_subject">Descripcion del Reclamo</string>
+    <string name="claim_subject_description">Ingrese la descripción del Reclamo</string>
+    <string name="presentment_description">Consultas y reclamos presentados</string>
+    <string name="presentment_waiting">Visualizar las respuesta a tus reclamos aquí, Aun no registras ningun reclamo o queja.</string>
+    <string name="presentment_subject">Description de la Queja</string>
+    <string name="presentment_subject_description">Ingrese la descripción de la queja</string>
+    <string name="image_optional">Imagen (Opcional)</string>
 
 </resources>

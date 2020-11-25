@@ -2,11 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mindef.gob">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,18 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
-        <provider
-            android:authorities="com.mindef.gob"
-            android:name="androidx.core.content.FileProvider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_path"/>
-        </provider>
-
-        <activity android:name=".activities.DocumentTrackActivity"/>
+        <activity android:name=".activities.PublicInformationActivity"></activity>
+        <activity android:name=".activities.ClaimActivity" />
+        <activity android:name=".activities.ComplaintActivity" />
+        <activity android:name=".activities.PresentmentActivity" />
+        <activity android:name=".activities.DocumentTrackActivity" />
         <activity android:name=".activities.DocumentViewActivity" />
         <activity android:name=".activities.DocumentReadActivity" />
         <activity android:name=".activities.DocumentCreateActivity" />
@@ -43,6 +31,20 @@
         <activity android:name=".activities.NavigationActivity" />
         <activity android:name=".activities.RegisterActivity" />
         <activity android:name=".activities.MainActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.mindef.gob"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

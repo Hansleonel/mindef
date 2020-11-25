@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.mindef.gob.activities.DocumentTrackActivity;
+import com.mindef.gob.activities.PresentmentActivity;
 import com.mindef.gob.activities.ProcedureActivity;
 import com.mindef.gob.R;
 
@@ -34,6 +35,15 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), DocumentTrackActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout lv_presentment = view.findViewById(R.id.lv_presentment);
+        lv_presentment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), PresentmentActivity.class);
                 startActivity(intent);
             }
         });

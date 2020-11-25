@@ -19,4 +19,7 @@
     <color name="greyish">#fff2f1f2</color>
     <color name="success_load">#a7ffeb</color>
     <color name="success_upload">#1de9b6</color>
+    <color name="colorSemiRed">#FFCDD2</color>
+    <color name="colorSemiBlue">#BBDEFB</color>
+    <color name="colorSemiPurple">#EDE7F6</color>
 </resources>
