@@ -15,7 +15,29 @@
     <string name="user_dni">DNI</string>
     <string name="user_password_recovery">Olvide mi Password</string>
     <string name="condition">Para continuar con el servicio tu estas de acuerdo con las políticas de privacidad de la Aplicación</string>
+    <string name="condition_service">Condiciones del Servicio</string>
+    <string name="condition_service_description">Términos para la solicitud de Información Pública</string>
+    <string name="condition_service_terms">Tienes derecho a acceder a la información pública de las instituciones del Estado según el principio de transparenciay el Texto Único Ordenado de la Ley Nº 27806, Ley de Transparencia y Acceso a la Información Públican.</string>
+    <string name="condition_service_terms_second">Las entidades tienen 10 días hábiles para responderte y si no pudieran atenderte en ese tiempo por ser difícil de conseguir, tienen 02 días hábiles contados desde el día siguiente en que presentaste tu solicitud para decirte el día en que te puedes acercar a recogerla.</string>
+    <string name="condition_service_terms_third"> Es importante que sepas que la entidad debe darte los motivos por los que no puede atenderte dentro del plazo.</string>
+    <string name="condition_service_terms_fourth">Exepciones</string>
+    <string name="condition_service_terms_fifth">Toma en cuenta que no puedes solicitar la siguiente información:</string>
+    <string name="condition_service_terms_sixth">* Información que afecte la intimidad personal y/o familiar de otras personas.</string>
+    <string name="condition_service_terms_seventh">* Información que involucre temas de inteligencia y/o seguridad nacional.</string>
+    <string name="condition_service_terms_eighth">* Información clasificada en el ámbito militar.</string>
+    <string name="condition_service_terms_ninth">* Información de negociaciones internacionales.</string>
+    <string name="condition_service_terms_tenth">* Información protegida por el secreto bancario, tributario, comercial, industrial, tecnológico y bursátil.</string>
+    <string name="condition_service_terms_eleventh">* Investigaciones en curso de la Administración Pública que se hayan iniciado hace menos de 6 meses sin que se haya dictado una resolución final.</string>
+    <string name="condition_service_terms_twelfth">* Información de asesores jurídicos o abogados que puedan revelar la estrategia de la Entidad Pública ante un proceso administrativo o judicial.</string>
+    <string name="condition_service_terms_fourteenth">* Información señalada por la Constitución o por una Ley aprobada por el Congreso de la República.</string>
     <string name="accept">Aceptar</string>
+    <string name="request">Solicitud</string>
+    <string name="request_subject">Descripción de la Solicitud</string>
+    <string name="request_description">Escriba la descripción de su solicitud</string>
+    <string name="request_information">Solicitud Información</string>
+    <string name="request_type">Tema de Solicitud</string>
+    <string name="request_means">Método de Entrega</string>
+    <string name="request_send">Enviar Solicitud</string>
     <string name="home">Home</string>
     <string name="notification">Notification</string>
     <string name="notifications">Notificaciones</string>
@@ -28,6 +50,8 @@
     <string name="register_claim">Registrar Reclamo</string>
     <string name="subject_complaint">Asunto de la Queja</string>
     <string name="subject_claim">Asunto del Reclamo</string>
+    <string name="person_natural">Persona Natural</string>
+    <string name="person_type">Tipo de Persona</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -51,6 +75,9 @@
     <string name="enter_claim">Ingrese su reclamo</string>
     <string name="complaint">Denuncia por corrupción</string>
     <string name="enter_complaint">Ingrese Denuncia</string>
+    <string name="impeachment">Denuncia por Corrupcion</string>
+    <string name="impeachment_description">Las denuncias pueden ser presentadas por toda persona natural o jurídica que advierta el acciona doloso por parte de un funcionario y/o servidor público del ministerio. </string>
+    <string name="impeachment_waiting">Visualizaras tus denuncias aqui, Aún no presentas denuncias</string>
     <string name="inbox">inbox</string>
     <string name="document">Documento</string>
     <string name="document_answer">Documento Respuesta</string>

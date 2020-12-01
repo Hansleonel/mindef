@@ -11,9 +11,11 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.mindef.gob.activities.DocumentTrackActivity;
+import com.mindef.gob.activities.ImpeachmentActivity;
 import com.mindef.gob.activities.PresentmentActivity;
 import com.mindef.gob.activities.ProcedureActivity;
 import com.mindef.gob.R;
+import com.mindef.gob.activities.PublicInformationActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -44,6 +46,24 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), PresentmentActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout lv_public_information = view.findViewById(R.id.lVPublicInformationRequest);
+        lv_public_information.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), PublicInformationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout lV_impeachment = view.findViewById(R.id.lV_impeachment);
+        lV_impeachment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), ImpeachmentActivity.class);
                 startActivity(intent);
             }
         });

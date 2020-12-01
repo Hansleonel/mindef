@@ -231,6 +231,7 @@
                         android:background="@color/colorWhite">
 
                         <LinearLayout
+                            android:id="@+id/lVPublicInformationRequest"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:foreground="?android:attr/selectableItemBackground"
@@ -316,6 +317,7 @@
                         android:background="@color/colorWhite">
 
                         <LinearLayout
+                            android:id="@+id/lV_impeachment"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:foreground="?android:attr/selectableItemBackground"

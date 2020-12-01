@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mindef.gob">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.PublicInformationActivity"></activity>
+        <activity android:name=".activities.ImpeachmentCreateActivity" />
+        <activity android:name=".activities.ImpeachmentActivity" />
+        <activity android:name=".activities.PublicInformationCreateActivity" />
+        <activity android:name=".activities.ConditionActivity" />
+        <activity android:name=".activities.PublicInformationActivity" />
         <activity android:name=".activities.ClaimActivity" />
         <activity android:name=".activities.ComplaintActivity" />
         <activity android:name=".activities.PresentmentActivity" />
@@ -42,9 +51,5 @@
                 android:resource="@xml/file_path" />
         </provider>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
