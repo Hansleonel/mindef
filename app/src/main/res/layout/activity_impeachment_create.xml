@@ -40,7 +40,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginEnd="10dp"
                     android:layout_toEndOf="@+id/arrowImpeachmentCreate"
-                    android:text="@string/public_information"
+                    android:text="@string/impeachment"
                     android:textColor="@color/colorWhite"
                     android:textSize="20sp" />
 
@@ -49,6 +49,47 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/impeachment_type"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_office"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/robotoligth"
+                    android:text="@string/person_natural"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>

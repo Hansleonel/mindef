@@ -50,142 +50,180 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/person_type"
-            android:textColor="@color/colorBlack"
-            android:textSize="16sp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputEditText
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/person_type"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/rect_edt_text">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/person_natural"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_contact_mail"
+                    android:tint="@color/colorBlack" />
+
+                <Spinner
+                    android:id="@+id/spVTypePersonPublicInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="24dp"
+                    android:prompt="@string/document_type" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/office"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/rect_edt_text">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/register_email"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_office"
+                    android:tint="@color/colorBlack" />
+
+                <Spinner
+                    android:id="@+id/spVOfficePublicInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="24dp"
+                    android:prompt="@string/document_type" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/request_means"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/rect_edt_text">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/register_email"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_shipping"
+                    android:tint="@color/colorBlack" />
+
+                <Spinner
+                    android:id="@+id/spVMethodPublicInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="24dp"
+                    android:prompt="@string/document_type" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/request_type"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSubjectPublicInformation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="32dp"
-                android:enabled="false"
-                android:autofillHints="@string/person_natural"
+                android:autofillHints="@string/request_type_method"
                 android:background="@drawable/rect_edt_text"
                 android:drawableStart="@drawable/ic_contact_mail"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/colorBlack"
                 android:fontFamily="@font/robotoligth"
-                android:hint="@string/person_natural"
+                android:hint="@string/request_type_method"
                 android:padding="12dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/request_type"
-            android:textColor="@color/colorBlack"
-            android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/rect_edt_text">
-
-            <ImageView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/register_email"
-                android:padding="12dp"
-                android:src="@drawable/ic_email"
-                android:tint="@color/colorBlack" />
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/request_subject"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
 
-            <Spinner
-                android:id="@+id/spVTypePublicInformation"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPublicInformationDescription"
                 android:layout_width="match_parent"
-                android:layout_height="43dp"
-                android:layout_marginStart="24dp"
-                android:prompt="@string/document_type" />
-
-        </RelativeLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/request_means"
-            android:textColor="@color/colorBlack"
-            android:textSize="16sp" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/rect_edt_text">
-
-            <ImageView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/register_email"
-                android:padding="12dp"
-                android:src="@drawable/ic_shipping"
-                android:tint="@color/colorBlack" />
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:autofillHints="@string/request_description"
+                android:background="@drawable/rect_edt_text"
+                android:drawableStart="@drawable/ic_subject"
+                android:fontFamily="@font/robotoligth"
+                android:hint="@string/request_description"
+                android:inputType="textMultiLine"
+                android:padding="12dp" />
 
-            <Spinner
-                android:id="@+id/spVMeansPublicInformation"
+            <Button
+                android:id="@+id/btnVPublicInformation"
                 android:layout_width="match_parent"
-                android:layout_height="43dp"
-                android:layout_marginStart="24dp"
-                android:prompt="@string/document_type" />
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:background="@color/colorRed"
+                android:text="@string/request_send"
+                android:textColor="@color/colorWhite" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/request_subject"
-            android:textColor="@color/colorBlack"
-            android:textSize="16sp" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:focusable="true"
-            android:focusableInTouchMode="true" />
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="32dp"
-            android:autofillHints="@string/request_description"
-            android:background="@drawable/rect_edt_text"
-            android:drawableStart="@drawable/ic_subject"
-            android:fontFamily="@font/robotoligth"
-            android:hint="@string/request_description"
-            android:inputType="textMultiLine"
-            android:padding="12dp" />
-
-        <Button
-            android:id="@+id/btnVCondition"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:background="@color/colorRed"
-            android:text="@string/request_send"
-            android:textColor="@color/colorWhite" />
-
-    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

@@ -18,7 +18,8 @@ public class ConditionActivity extends AppCompatActivity {
         findViewById(R.id.btnVCondition).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Intent i = new Intent(ConditionActivity.this, )
+                Intent intent = new Intent(ConditionActivity.this, PublicInformationCreateActivity.class);
+                startActivity(intent);
             }
         });
     }

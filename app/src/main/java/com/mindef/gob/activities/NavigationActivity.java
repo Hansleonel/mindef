@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mindef.gob.fragments.HomeFragment;
@@ -21,12 +22,14 @@ public class NavigationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+        setTheme(R.style.AppThemeNotifications);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         // TODO Default Fragment
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
 
+        getNotificationCount();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -51,4 +54,9 @@ public class NavigationActivity extends AppCompatActivity {
             return true;
         }
     };
+
+    private void getNotificationCount() {
+        bottomNavigationView.getOrCreateBadge(R.id.nav_notification).setNumber(4);
+        bottomNavigationView.setVisibility(View.VISIBLE);
+    }
 }

@@ -36,6 +36,7 @@
     <string name="request_description">Escriba la descripción de su solicitud</string>
     <string name="request_information">Solicitud Información</string>
     <string name="request_type">Tema de Solicitud</string>
+    <string name="request_type_method">Ingrese Tema del solicitud</string>
     <string name="request_means">Método de Entrega</string>
     <string name="request_send">Enviar Solicitud</string>
     <string name="home">Home</string>
@@ -46,6 +47,7 @@
     <string name="presentment">Libro de Reclamaciones</string>
     <string name="complain">Queja</string>
     <string name="claim">Reclamo</string>
+    <string name="office">Oficina</string>
     <string name="register_complaint">Registrar Queja</string>
     <string name="register_claim">Registrar Reclamo</string>
     <string name="subject_complaint">Asunto de la Queja</string>
@@ -70,6 +72,7 @@
     <string name="public_information_description">Tiene derecho a acceder a la información pública de las instituciones del Estado según la Ley Nº 27806,Ley de Transparencia y Acceso a la Información Pública.</string>
     <string name="public_information_empty">Bandeja Vacía</string>
     <string name="public_information_waiting">Visualiza aqui tus solicitudes al acceso a la información</string>
+    <string name="public_information_office">Oficina informante</string>
     <string name="search_information">Busca Información</string>
     <string name="white_book">Libro de Reclamaciones</string>
     <string name="enter_claim">Ingrese su reclamo</string>
@@ -78,6 +81,7 @@
     <string name="impeachment">Denuncia por Corrupcion</string>
     <string name="impeachment_description">Las denuncias pueden ser presentadas por toda persona natural o jurídica que advierta el acciona doloso por parte de un funcionario y/o servidor público del ministerio. </string>
     <string name="impeachment_waiting">Visualizaras tus denuncias aqui, Aún no presentas denuncias</string>
+    <string name="impeachment_type">Tipo de Denuncia</string>
     <string name="inbox">inbox</string>
     <string name="document">Documento</string>
     <string name="document_answer">Documento Respuesta</string>

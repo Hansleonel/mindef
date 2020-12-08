@@ -11,10 +11,14 @@ import com.mindef.gob.R;
 
 public class ImpeachmentActivity extends AppCompatActivity {
 
+    private LinearLayout lVImpeachmentAnimation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_impeachment);
+
+        lVImpeachmentAnimation = findViewById(R.id.lVImpeachmentAnimation);
 
         LinearLayout lVImpeachment = findViewById(R.id.lVImpeachment);
         lVImpeachment.setOnClickListener(new View.OnClickListener() {
@@ -24,5 +28,12 @@ public class ImpeachmentActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        dataDocumentsImpeachment();
     }
+
+    private void dataDocumentsImpeachment() {
+        lVImpeachmentAnimation.setVisibility(View.VISIBLE);
+    }
+
 }

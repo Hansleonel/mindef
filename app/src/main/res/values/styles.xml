@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorRed</item>
     </style>
 
+    <style name="AppThemeNotifications" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorRed</item>
+    </style>
 </resources>
