@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
     tools:context=".activities.ClaimActivity">
 
@@ -99,6 +100,7 @@
     </androidx.cardview.widget.CardView>
 
     <ScrollView
+        android:id="@+id/sVClaim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -250,7 +252,65 @@
                 android:textColor="@color/colorWhite" />
 
         </LinearLayout>
-
     </ScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieVUploadClaim"
+        android:layout_width="194dp"
+        android:layout_height="194dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/upload" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieVErrorClaim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/error" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieVSuccessClaim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/success" />
+
+    <TextView
+        android:id="@+id/txtVDocumentUploadWaitClaim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/uploading_documents"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtVDocumentUploadSuccessClaim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/upload_successful"
+        android:textColor="@color/success_upload"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtVDocumentUploadErrorClaim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/upload_wrong"
+        android:textColor="@color/colorRed"
+        android:textSize="18sp"
+        android:visibility="gone" />
 
 </LinearLayout>
