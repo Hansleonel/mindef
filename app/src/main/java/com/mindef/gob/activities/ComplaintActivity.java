@@ -170,7 +170,9 @@ public class ComplaintActivity extends AppCompatActivity {
             }
             // TODO BUILD DATA
             builder.addFormDataPart("asunto", subjectComplaint);
-            builder.addFormDataPart("description", descriptionComplaint);
+            // builder.addFormDataPart("description", descriptionComplaint);
+            builder.addFormDataPart("tipodoc", "0015");
+            builder.addFormDataPart("tiposerv", "31");
             requestBody = builder.build();
 
             try {

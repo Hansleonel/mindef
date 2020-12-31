@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -31,6 +32,7 @@ import static com.mindef.gob.utilities.Constants.URL_BASE;
 public class DocumentTrackActivity extends AppCompatActivity {
 
     private EditText edtV_track_id;
+    private ImageView arrowTrack;
 
     private String TOKENUSER;
 
@@ -42,6 +44,7 @@ public class DocumentTrackActivity extends AppCompatActivity {
         setContentView(R.layout.activity_document_track);
 
         edtV_track_id = findViewById(R.id.edt_track_document);
+        arrowTrack = findViewById(R.id.arrow_create_document);
 
         getUserTokenShared();
 
@@ -54,6 +57,13 @@ public class DocumentTrackActivity extends AppCompatActivity {
                     codeDoc = edtV_track_id.getText().toString().trim();
                     searchDocument();
                 }
+            }
+        });
+
+        arrowTrack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

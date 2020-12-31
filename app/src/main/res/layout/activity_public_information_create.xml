@@ -51,6 +51,7 @@
 
 
     <ScrollView
+        android:id="@+id/sVPublicInformation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -225,5 +226,64 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieVUploadPublicInformation"
+        android:layout_width="194dp"
+        android:layout_height="194dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/upload" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieVErrorPublicInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/error" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieVSuccessPublicInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/success" />
+
+    <TextView
+        android:id="@+id/txtVPublicInformationWait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/uploading_documents"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtVPublicInformationSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/upload_successful"
+        android:textColor="@color/success_upload"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtVPublicInformationError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/upload_wrong"
+        android:textColor="@color/colorRed"
+        android:textSize="18sp"
+        android:visibility="gone" />
 
 </LinearLayout>

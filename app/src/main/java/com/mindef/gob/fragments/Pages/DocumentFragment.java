@@ -145,7 +145,10 @@ public class DocumentFragment extends Fragment {
 
                             if (response.length() > 0) {
                                 lVDocumentAnimation.setVisibility(View.GONE);
+                            } else {
+                                lVDocumentAnimation.setVisibility(View.VISIBLE);
                             }
+
                             swipeRefreshLayout.setVisibility(View.VISIBLE);
                             swipeRefreshLayout.setRefreshing(false);
 

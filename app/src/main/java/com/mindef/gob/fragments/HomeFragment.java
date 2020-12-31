@@ -41,6 +41,15 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        LinearLayout lv_public_information = view.findViewById(R.id.lVPublicInformationRequest);
+        lv_public_information.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), PublicInformationActivity.class);
+                startActivity(intent);
+            }
+        });
+
         LinearLayout lv_presentment = view.findViewById(R.id.lv_presentment);
         lv_presentment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,14 +59,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        LinearLayout lv_public_information = view.findViewById(R.id.lVPublicInformationRequest);
-        lv_public_information.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getContext(), PublicInformationActivity.class);
-                startActivity(intent);
-            }
-        });
 
         LinearLayout lV_impeachment = view.findViewById(R.id.lV_impeachment);
         lV_impeachment.setOnClickListener(new View.OnClickListener() {

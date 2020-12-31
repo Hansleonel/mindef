@@ -188,14 +188,15 @@
     </LinearLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeVPresentment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBackground">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rVPresentment"
+            android:id="@+id/rVPresentmentComplaint"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             tools:listitem="@layout/item_presentment" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -25,6 +25,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
@@ -57,6 +58,7 @@ public class DocumentCreateActivity extends AppCompatActivity {
     private LinearLayout lV_lottie_animation;
     private CardView cardView_document_create_01, cardView_document_create_02, cardView_document_create_03, cardView_document_create_04, cardView_document_create_05;
     private TextView txtV_document_create_tittle_01, txtV_document_create_tittle_02, txtV_document_create_tittle_03, txtV_document_create_tittle_04, txtV_document_create_tittle_05, txtV_document_create_size_01, txtV_document_create_size_02, txtV_document_create_size_03, txtV_document_create_size_04, txtV_document_create_size_05, txtV_document_create_count_files;
+    private ImageView arrowDocument;
     private ProgressBar progressBar;
 
     private LottieAnimationView lottieV_upload, lottieV_error, lottieV_success;
@@ -94,6 +96,7 @@ public class DocumentCreateActivity extends AppCompatActivity {
         txtV_document_upload_wait = findViewById(R.id.txtV_document_upload_wait);
         txtV_document_upload_error = findViewById(R.id.txtV_document_upload_error);
         txtV_document_upload_success = findViewById(R.id.txtV_document_upload_success);
+        arrowDocument = findViewById(R.id.arrow_create_document);
 
         lottieV_upload = findViewById(R.id.lottieV_upload);
         lottieV_error = findViewById(R.id.lottieV_error);
@@ -208,6 +211,13 @@ public class DocumentCreateActivity extends AppCompatActivity {
                 UploadTask uploadTask = new UploadTask();
                 uploadTask.execute(new String[]{pdfFilePath01, pdfFilePath02, pdfFilePath03, pdfFilePath04, pdfFilePath05});
 
+            }
+        });
+
+        arrowDocument.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

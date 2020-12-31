@@ -35,8 +35,8 @@
     <string name="request_subject">Descripción de la Solicitud</string>
     <string name="request_description">Escriba la descripción de su solicitud</string>
     <string name="request_information">Solicitud Información</string>
-    <string name="request_type">Tema de Solicitud</string>
-    <string name="request_type_method">Ingrese Tema del solicitud</string>
+    <string name="request_type">Asunto de Solicitud</string>
+    <string name="request_type_method">Ingrese Asunto del solicitud</string>
     <string name="request_means">Método de Entrega</string>
     <string name="request_send">Enviar Solicitud</string>
     <string name="home">Home</string>
@@ -54,7 +54,9 @@
     <string name="subject_claim">Asunto del Reclamo</string>
     <string name="person_natural">Persona Natural</string>
     <string name="person_type">Tipo de Persona</string>
+    <string name="person_dependency">Depedencia Laboral denunciado</string>
     <string name="add">Add</string>
+    <string name="add_person">Agregar</string>
     <string name="accused">Personas Acusadas</string>
     <string name="anonymously">Anónima</string>
 
@@ -82,6 +84,10 @@
     <string name="complaint">Denuncia por corrupción</string>
     <string name="enter_complaint">Ingrese Denuncia</string>
     <string name="impeachment">Denuncia por Corrupcion</string>
+    <string name="impeachment_person">Agregar Denunciado</string>
+    <string name="impeachment_person_position">Cargon del Denunciado</string>
+    <string name="impeachment_person_name">Nombres del Denunciado</string>
+    <string name="impeachment_person_second">Apellidos del Denunciado</string>
     <string name="impeachment_description">Las denuncias pueden ser presentadas por toda persona natural o jurídica que advierta el acciona doloso por parte de un funcionario y/o servidor público del ministerio. </string>
     <string name="impeachment_waiting">Visualizaras tus denuncias aqui, Aún no presentas denuncias</string>
     <string name="impeachment_type">Tipo de Denuncia</string>
@@ -125,6 +131,10 @@
     <string name="send_document">Enviar Documento</string>
     <string name="sending_document">0 Documentos por Enviar</string>
     <string name="sending_empty">Documentos PDF vacios</string>
+    <string name="sending_person_impeachment_name_empty">El campo de Nombre de la Persona esta vacío, se necesita un referencia</string>
+    <string name="sending_person_impeachment_position_empty">El campo del Cargo del denunciado esta vacío, se necesita un referencia</string>
+    <string name="sending_person_impeachment_second_name_empty">El Campo de Apellidos esta cacio, se necesita una referencia</string>
+    <string name="sending_person_impeachment_dependency">Debes de seleccionar una Dependencia Laboral, o selecciona "otros"</string>
     <string name="upload_successful">Documentos Enviados Correctamente</string>
     <string name="upload_wrong">Documentos No Enviados, vuelve a intentar</string>
     <string name="upload_wrong_subject">El asunto debe de tener mas de 11 caracteres</string>
@@ -160,5 +170,6 @@
     <string name="presentment_subject">Description de la Queja</string>
     <string name="presentment_subject_description">Ingrese la descripción de la queja</string>
     <string name="image_optional">Imagen (Opcional)</string>
+    <string name="cancel">Cancelar</string>
 
 </resources>

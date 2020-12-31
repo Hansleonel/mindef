@@ -170,7 +170,9 @@ public class ClaimActivity extends AppCompatActivity {
             }
             // TODO BUILD DATA
             builder.addFormDataPart("asunto", subjectClaim);
-            builder.addFormDataPart("description", descriptionClaim);
+            // builder.addFormDataPart("description", descriptionClaim);
+            builder.addFormDataPart("tipodoc", "0015");
+            builder.addFormDataPart("tiposerv", "3");
             requestBody = builder.build();
 
             try {

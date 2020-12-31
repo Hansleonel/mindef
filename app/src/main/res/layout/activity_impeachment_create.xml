@@ -116,13 +116,23 @@
                 android:layout_marginEnd="32dp"
                 android:orientation="horizontal">
 
+                <LinearLayout
+                    android:id="@+id/lVPersonImpeachment"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPersonImpeachment"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:autofillHints="@string/subject_complaint"
                     android:background="@drawable/rect_edt_text"
-                    android:drawableStart="@drawable/ic_contact_mail"
+                    android:drawableStart="@drawable/ic_group_add"
                     android:drawablePadding="8dp"
+                    android:enabled="false"
                     android:drawableTint="@color/colorBlack"
                     android:fontFamily="@font/robotoligth"
                     android:hint="@string/accused"
@@ -209,16 +219,6 @@
 
             </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:id="@+id/lVPersonImpeachment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:orientation="vertical">
-
-            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"

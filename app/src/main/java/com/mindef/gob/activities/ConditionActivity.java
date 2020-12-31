@@ -20,6 +20,7 @@ public class ConditionActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ConditionActivity.this, PublicInformationCreateActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

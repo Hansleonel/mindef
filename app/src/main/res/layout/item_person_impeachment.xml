@@ -40,6 +40,22 @@
                 android:textColor="@color/colorRed"
                 android:textSize="15sp" />
 
+            <TextView
+                android:id="@+id/idPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/chip_card_icon_parent"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxLength="25"
+                android:text="@string/person_natural"
+                android:textColor="@color/colorRed"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/chip_card_icon_parent"
                 android:layout_width="40dp"
