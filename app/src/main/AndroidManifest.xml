@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.ImpeachmentPersonActivity"></activity>
+        <activity android:name=".activities.EstablishmentActivity"></activity>
+        <activity android:name=".activities.PhoneLinesActivity" />
+        <activity android:name=".activities.ImpeachmentPersonActivity" />
         <activity android:name=".activities.ImpeachmentCreateActivity" />
         <activity android:name=".activities.ImpeachmentActivity" />
         <activity android:name=".activities.PublicInformationCreateActivity" />
@@ -47,9 +49,9 @@
                 android:resource="@xml/file_path" />
         </provider>
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

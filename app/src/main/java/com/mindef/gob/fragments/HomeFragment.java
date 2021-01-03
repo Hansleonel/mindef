@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 
 import com.mindef.gob.activities.DocumentTrackActivity;
 import com.mindef.gob.activities.ImpeachmentActivity;
+import com.mindef.gob.activities.PhoneLinesActivity;
 import com.mindef.gob.activities.PresentmentActivity;
 import com.mindef.gob.activities.ProcedureActivity;
 import com.mindef.gob.R;
@@ -46,6 +47,15 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), PublicInformationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout lv_phone_lines = view.findViewById(R.id.lVPhoneLines);
+        lv_phone_lines.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), PhoneLinesActivity.class);
                 startActivity(intent);
             }
         });

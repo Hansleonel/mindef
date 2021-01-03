@@ -71,6 +71,7 @@
     <string name="tracking_procedures_description">Puedes darle seguimiento a los documentos enviados al Ministerio</string>
     <string name="enter_number">Ingresa Código</string>
     <string name="attention_phones">Lineas de atención</string>
+    <string name="attention_phones_description">Listado de Directorios por Sedes</string>
     <string name="mindef_numbers">Números Mindef</string>
     <string name="public_information">Información Pública</string>
     <string name="public_information_access">Acceso Informacion Publica</string>
@@ -170,6 +171,17 @@
     <string name="presentment_subject">Description de la Queja</string>
     <string name="presentment_subject_description">Ingrese la descripción de la queja</string>
     <string name="image_optional">Imagen (Opcional)</string>
+    <string name="establishment_name">Sede Central</string>
+    <string name="establishment_direction">Av. La peruanidad, Jesus Maria</string>
+    <string name="establishment_directory">Ver Directorio</string>
+    <string name="directory">Directorio</string>
+    <string name="phone">Teléfono</string>
+    <string name="phone_number">943575438</string>
+    <string name="mail">Correo Electrónico</string>
+    <string name="mail_description">correo@mindef.gob.pe</string>
+    <string name="direction">Dirección</string>
+    <string name="distance">Distancia</string>
+    <string name="distance_description">4.2 km</string>
     <string name="cancel">Cancelar</string>
 
 </resources>

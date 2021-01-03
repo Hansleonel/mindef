@@ -371,6 +371,7 @@ public class DocumentCreateActivity extends AppCompatActivity {
                 Response response = okHttpClient.newCall(request).execute();
 
                 Log.d("RESPONSE", "doInBackground: " + response);
+                Toast.makeText(DocumentCreateActivity.this, "" + response.toString(), Toast.LENGTH_LONG).show();
                 if (response != null && response.isSuccessful()) {
                     return response.body().string();
                 } else {
@@ -378,6 +379,7 @@ public class DocumentCreateActivity extends AppCompatActivity {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
+                Toast.makeText(DocumentCreateActivity.this, "" + e.getCause(), Toast.LENGTH_LONG).show();
             }
             return null;
         }
@@ -386,6 +388,7 @@ public class DocumentCreateActivity extends AppCompatActivity {
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             Log.d("DocumentCreateActivity", "onPostExecute: " + s);
+            Toast.makeText(DocumentCreateActivity.this, "" + s, Toast.LENGTH_LONG).show();
             if (s != null) {
                 Toast.makeText(DocumentCreateActivity.this, R.string.upload_successful, Toast.LENGTH_LONG).show();
                 lottieV_success.setVisibility(View.VISIBLE);
